@@ -62,5 +62,26 @@ namespace Repository
             categoria.Nome = linha["nome"].ToString();
             return categoria;
         }
+
+        public bool Alterar(Categoria categoria)
+        {
+            SqlCommand comando = Conexao.Conectar();
+            comando.CommandText = @"UPDATE categorias SET nome = @NOME WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", categoria.Id);
+            comando.Parameters.AddWithValue("@NOME", categoria.Nome);
+            int quantidadeAfetada = comando.ExecuteNonQuery(;
+            comando.Connection.Close();
+            return quantidadeAfetada == 1;
+        }
+
+        public bool Apagar(int id)
+        {
+            SqlCommand comando = Conexao.Conectar();
+            comando.CommandText = @"DELETE FROM categorias WHERE id = @ID";
+            comando.Parameters.AddWithValue("@Id", id);
+            int quantidadeAfetada = comando.ExecuteNonQuery();
+            comando.Connection.Close();
+            return quantidadeAfetada == 1;
+        }
     }
 }
