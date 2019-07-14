@@ -28,5 +28,17 @@
             <th>Ação</th>
         </tr>
     </tfoot>
-    <tbody></tbody>
+    <tbody>
+        @foreach(Model.Categoria categoria in ViewBag.Categorias)
+        {
+            <tr>
+                <td>@categoria.Id</td>
+                <td>@categoria.Nome</td>
+                <td>
+                    <a href="/categoria/editar?id=@categoria.Id" class="btn btn-primary"><i class="fas fa-pen"></i> Editar</a>
+                    <a href="/categoria/apagar?id=@categoria.Id" class="btn btn-danger"><i class="fas fa-trash"></i>Apagar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

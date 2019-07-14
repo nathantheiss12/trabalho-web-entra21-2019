@@ -34,7 +34,7 @@ namespace Repository
         public int Inserir(Categoria categoria)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"INSERT INTO categorias (nome) OUTPUT INSERTED>ID VALUES (@NOME)";
+            comando.CommandText = @"INSERT INTO categorias (nome) OUTPUT INSERTED.ID VALUES (@NOME)";
             comando.Parameters.AddWithValue("@NOME", categoria.Nome);
             int id = Convert.ToInt32(comando.ExecuteScalar());
             comando.Connection.Close();
@@ -69,7 +69,7 @@ namespace Repository
             comando.CommandText = @"UPDATE categorias SET nome = @NOME WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", categoria.Id);
             comando.Parameters.AddWithValue("@NOME", categoria.Nome);
-            int quantidadeAfetada = comando.ExecuteNonQuery(;
+            int quantidadeAfetada = comando.ExecuteNonQuery();
             comando.Connection.Close();
             return quantidadeAfetada == 1;
         }
