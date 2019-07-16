@@ -15,5 +15,9 @@ namespace Model
         public string Titulo;
         public string Descricao;
         public DateTime Duracao;
+
+        public Usuario usuario;
+        public Categoria categoria;
+        public Projeto projeto;
     }
 }
