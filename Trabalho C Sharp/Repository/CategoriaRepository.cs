@@ -11,6 +11,17 @@ namespace Repository
 {
     public class CategoriaRepository
     {
+        public int Inserir(Categoria categoria)
+        {
+            SqlCommand comando = Conexao.Conectar();
+            comando.CommandText = @"INSERT INTO categorias (nome) OUTPUT INSERTED.ID VALUES (@NOME)";
+            comando.Parameters.AddWithValue("@NOME", categoria.Nome);
+            int id = Convert.ToInt32(comando.ExecuteScalar());
+            comando.Connection.Close();
+
+            return id;
+        }
+
         public List<Categoria> ObterTodos()
         {
             SqlCommand comando = Conexao.Conectar();
@@ -29,16 +40,6 @@ namespace Repository
             }
             comando.Connection.Close();
             return categorias;
-        }
-
-        public int Inserir(Categoria categoria)
-        {
-            SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"INSERT INTO categorias (nome) OUTPUT INSERTED.ID VALUES (@NOME)";
-            comando.Parameters.AddWithValue("@NOME", categoria.Nome);
-            int id = Convert.ToInt32(comando.ExecuteScalar());
-            comando.Connection.Close();
-            return id;
         }
 
         public Categoria ObterPeloId(int id)

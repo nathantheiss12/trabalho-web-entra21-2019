@@ -52,7 +52,7 @@ CREATE TABLE categorias(
 	nome VARCHAR(50)
 );
 
-CREATE TABLE terefas(
+CREATE TABLE tarefas(
 	id INT PRIMARY KEY IDENTITY(1,1),
 
 	id_usuario_responsavel INT,
