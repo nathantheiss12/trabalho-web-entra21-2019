@@ -3,5 +3,79 @@
     ViewBag.Title = "Cadastro";
 }
 
-<h2>Cadastro</h2>
+<title> Cadastro Tarefa </title>
+<h3 class="text-center mb-3 mt-3 text-info">Cadastro de Tarefas</h3>
 
+<form action="tarefa/store" method="post">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="campo-usuario">Usuario</label>
+                <select class="form-control" name="usuario">
+                    <option disabled="disabled" selected="selected">Selecione um Usuario</option>
+                    @foreach (Model.Usuario usuario in ViewBag.Categorias)
+                    {
+                        <option value="@usuario.Id">@usuario.Nome</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="campo-projeto">Projeto</label>
+                <select class="form-control" name="projeto">
+                    <option disabled="disabled" selected="selected">Selecione um Projeto</option>
+                    @foreach (Model.Projeto projeto in ViewBag.Projetos)
+                    {
+                        <option value="@projeto.Id">@projeto.Nome</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="campo-categoria">Categoria</label>
+                <select class="form-control" name="categoria">
+                    <option disabled="disabled" selected="selected">Selecione uma Categoria</option>
+                    @foreach (Model.Categoria categoria in ViewBag.Categorias)
+                    {
+                        <option value="@categoria.Id">@categoria.Nome</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="campo-titulo">Título</label>
+                <input type="text" name="titulo" id="campo-titulo" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="campo-descricao">Descrição</label>
+                <input type="text" name="descricao" id="campo-descricao" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="campo-duracao">Duração</label>
+                <input type="datetime" name="duracao" id="campo-duracao" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button type="submit" class="btn btn-success float-right"><i class="fas fa-save"></i> Salvar</button>
+        </div>
+    </div>
+</form>
