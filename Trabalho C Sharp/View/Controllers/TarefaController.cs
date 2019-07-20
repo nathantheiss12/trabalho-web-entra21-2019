@@ -25,7 +25,7 @@ namespace View.Controllers
             return View();
         }
 
-        public ActionResult Cadastro()
+        public ActionResult Cadastro()  
         {
             UsuarioRepository usuarioRepository = new UsuarioRepository();
             List<Usuario> usuarios = usuarioRepository.ObterTodos();
