@@ -64,7 +64,7 @@ namespace Repository
             categorias.nome As 'CategoriaNome',
             tarefas.titulo AS 'TarefaTitulo',
             tarefas.descricao AS 'TarefaDescricao',
-            tarefas.duracao AS 'TaredaDuracao'
+            tarefas.duracao AS 'TarefaDuracao'
             FROM tarefas
             INNER JOIN usuarios ON (tarefas.id_usuario_responsavel = usuarios.id)
             INNER JOIN projetos ON (tarefas.id_projeto = projetos.id)

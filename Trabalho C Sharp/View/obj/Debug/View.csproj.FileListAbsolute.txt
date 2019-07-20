@@ -77,3 +77,7 @@ C:\Users\Eduardo\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\Vie
 C:\Users\Eduardo\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\View\obj\Debug\View.csproj.CopyComplete
 C:\Users\Eduardo\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\View\obj\Debug\View.dll
 C:\Users\Eduardo\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\View\obj\Debug\View.pdb
+C:\Users\vandoepri\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\View\obj\Debug\View.csprojAssemblyReference.cache
+C:\Users\vandoepri\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\Users\vandoepri\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\View\obj\Debug\View.dll
+C:\Users\vandoepri\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\View\obj\Debug\View.pdb
