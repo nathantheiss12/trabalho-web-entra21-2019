@@ -93,5 +93,44 @@ namespace Repository
             }
             return clientes;
         }
+
+        public Cliente ObterPeloId()
+        {
+            SqlCommand comando = Conexao.Conectar();
+            comando.CommandText = @"SELECT cliente.id AS 'ClienteId',
+            cliente.Id_Cidade AS 'ClienteIdCidade',
+            cliente.Nome AS 'ClienteNome',
+            cliente.Cpf AS 'ClienteCpf',
+            cliente.Data_Nascimento AS 'ClienteDataNascimento',
+            cliente.Numero AS 'ClienteNumero',
+            cliente.Complemento AS 'ClienteComplemento',
+            cliente.Logradouro AS 'ClienteLogradouro',
+            cliente.Cep AS 'ClienteCep'
+            INNER JOIN cidades ON (cliente.id_cidade = cidade.id
+            WHERE id = @ID";
+
+            DataTable tabela = new DataTable();
+            tabela.Load(comando.ExecuteReader());
+            comando.Connection.Close();
+
+            List<Cliente> clientes = new List<Cliente>();
+            if(tabela.Rows.Count == 0)
+            {
+                return null;
+            }
+            DataRow linha = tabela.Rows[0];
+            Cliente cliente = new Cliente();
+            cliente.Id_Cidade = Convert.ToInt32(linha["ClienteIdCidade"]);
+            cliente.Nome = linha["ClienteNome"].ToString();
+            cliente.Cpf = linha["ClienteCpf"].ToString();
+            cliente.Data_Nascimento = Convert.ToDateTime(linha["ClienteDataNascimento"]);
+            cliente.Numero = Convert.ToInt32(linha["ClienteNumero"]);
+            cliente.Complemento = linha["ClienteComplemento"].ToString();
+            cliente.Logradouro = linha["ClienteLogradouro"].ToString();
+            cliente.Cep = linha["ClienteCep"].ToString();
+
+            return cliente;
+
+        }
     }
 }
