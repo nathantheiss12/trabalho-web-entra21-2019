@@ -59,7 +59,7 @@ namespace Repository
             tarefas.id_usuario_responsavel AS 'TarefaIdUsuarioResponsavel',
             usuarios.nome AS 'UsuarioNome',
             tarefas.id_projeto AS 'TarefaIdProjeto',
-            projetos.nome AS 'ProjetoTitulo',
+            projetos.nome AS 'ProjetoNome',
             tarefas.id_categoria AS 'TarefaIdCategoria',
             categorias.nome As 'CategoriaNome',
             tarefas.titulo AS 'TarefaTitulo',
@@ -88,7 +88,7 @@ namespace Repository
                 tarefa.projeto = new Projeto();
                 tarefa.categoria = new Categoria();
                 tarefa.usuario.Nome = linha["UsuarioNome"].ToString();
-                tarefa.projeto.Titulo = linha["ProjetoTitulo"].ToString();
+                tarefa.projeto.Nome = linha["ProjetoNome"].ToString();
                 tarefa.categoria.Nome = linha["CategoriaNome"].ToString();
                 tarefas.Add(tarefa);
             }
@@ -102,7 +102,7 @@ namespace Repository
             tarefas.id_usuario_responsavel AS 'TarefaIdUsuarioResponsavel',
             usuarios.nome AS 'UsuarioNome',
             tarefas.id_projeto AS 'TarefaIdProjeto',
-            projetos.nome AS 'ProjetoTitulo',
+            projetos.nome AS 'ProjetoNome',
             tarefas.id_categoria AS 'TarefaIdCategoria',
             categorias.nome As 'CategoriaNome',
             tarefas.titulo AS 'TarefaTitulo',
@@ -136,7 +136,7 @@ namespace Repository
             tarefa.projeto = new Projeto();
             tarefa.categoria = new Categoria();
             tarefa.usuario.Nome = linha["UsuarioNome"].ToString();
-            tarefa.projeto.Titulo = linha["ProjetoTitulo"].ToString();
+            tarefa.projeto.Nome = linha["ProjetoNome"].ToString();
             tarefa.categoria.Nome = linha["CategoriaNome"].ToString();
 
             return tarefa;
