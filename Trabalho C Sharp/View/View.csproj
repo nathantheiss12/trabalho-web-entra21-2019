@@ -218,6 +218,7 @@
     <Content Include="Views\Tarefa\Index.cshtml" />
     <Content Include="Views\Tarefa\Cadastro.cshtml" />
     <Content Include="Views\Tarefa\Editar.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -227,7 +228,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Views\Cliente\" />
     <Folder Include="Views\Projeto\" />
   </ItemGroup>
   <ItemGroup>

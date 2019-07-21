@@ -7,3 +7,7 @@ C:\Users\Eduardo\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\Rep
 C:\Users\Eduardo\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\Repository\obj\Debug\Repository.csproj.CopyComplete
 C:\Users\Eduardo\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\Repository\obj\Debug\Repository.dll
 C:\Users\Eduardo\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\Repository\obj\Debug\Repository.pdb
+C:\Users\vandoepri\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+C:\Users\vandoepri\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\vandoepri\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\Repository\obj\Debug\Repository.dll
+C:\Users\vandoepri\Documents\GitHub\trabalho-web-entra21-2019\Trabalho C Sharp\Repository\obj\Debug\Repository.pdb
