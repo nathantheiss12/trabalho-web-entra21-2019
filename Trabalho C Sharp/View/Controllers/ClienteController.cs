@@ -77,6 +77,10 @@ namespace View.Controllers
             return RedirectToAction("Index");
         }
 
-
+        public ActionResult Apagar(int id)
+        {
+            repository.Apagar(id);
+            return RedirectToAction("Index");
+        }
     }
 }
