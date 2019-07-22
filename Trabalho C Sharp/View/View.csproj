@@ -219,6 +219,7 @@
     <Content Include="Views\Tarefa\Cadastro.cshtml" />
     <Content Include="Views\Tarefa\Editar.cshtml" />
     <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\Cadastro.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
